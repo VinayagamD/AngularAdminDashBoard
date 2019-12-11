@@ -1,23 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
+import {FlexModule} from '@angular/flex-layout';
+import {MatButtonModule, MatDividerModule, MatIconModule, MatListModule, MatMenuModule, MatToolbarModule} from '@angular/material';
+
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
-import {MatButtonModule, MatDividerModule, MatIconModule, MatMenuModule, MatToolbarModule} from '@angular/material';
-import {FlexModule} from '@angular/flex-layout';
-
+import { AreaComponent } from './widgets/area/area.component';
+import {HighchartsChartModule} from 'highcharts-angular';
+import { CardComponent } from './widgets/card/card.component';
 
 
 @NgModule({
   declarations: [
     SidebarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AreaComponent,
+    CardComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AreaComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +34,9 @@ import {FlexModule} from '@angular/flex-layout';
     MatButtonModule,
     FlexModule,
     MatMenuModule,
+    MatListModule,
+    RouterModule,
+    HighchartsChartModule
   ]
 })
 export class SharedModule { }
