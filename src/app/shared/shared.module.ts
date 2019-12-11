@@ -20,12 +20,13 @@ import { CardComponent } from './widgets/card/card.component';
     AreaComponent,
     CardComponent
   ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
-    AreaComponent
-  ],
+    exports: [
+        HeaderComponent,
+        FooterComponent,
+        SidebarComponent,
+        AreaComponent,
+        CardComponent
+    ],
   imports: [
     CommonModule,
     MatDividerModule,

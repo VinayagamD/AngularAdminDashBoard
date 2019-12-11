@@ -11,6 +11,11 @@ export class DefaultComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      window.dispatchEvent(
+        new Event('resize')
+      );
+    }, 300);
   }
 
   sideBarToggler($event: any) {
