@@ -10,6 +10,7 @@ import {FooterComponent} from './components/footer/footer.component';
 import { AreaComponent } from './widgets/area/area.component';
 import {HighchartsChartModule} from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
+import { PieComponent } from './widgets/pie/pie.component';
 
 
 @NgModule({
@@ -18,14 +19,16 @@ import { CardComponent } from './widgets/card/card.component';
     HeaderComponent,
     FooterComponent,
     AreaComponent,
-    CardComponent
+    CardComponent,
+    PieComponent
   ],
     exports: [
         HeaderComponent,
         FooterComponent,
         SidebarComponent,
         AreaComponent,
-        CardComponent
+        CardComponent,
+        PieComponent
     ],
   imports: [
     CommonModule,

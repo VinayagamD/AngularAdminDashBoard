@@ -9,11 +9,13 @@ import HC_exporting from 'highcharts/modules/exporting';
 })
 export class CardComponent implements OnInit {
 
-  Highcharts = Highcharts;
-  chartOptions: {};
   @Input() label: string;
   @Input() total: string;
   @Input() percentage: string;
+  @Input() data = [];
+
+  Highcharts = Highcharts;
+  chartOptions: {};
   constructor() { }
 
   ngOnInit() {
@@ -67,7 +69,7 @@ export class CardComponent implements OnInit {
         tickOptions: []
       },
       series: [{
-        data: [ 71, 78, 39, 66 ]
+        data: this.data
       }]
     };
 
